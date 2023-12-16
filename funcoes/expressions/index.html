@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Expressions</title>
+</head>
+<body onload="mostrar()">
+    <input type="button" value="Show Message" onclick="f1()">
+    <input type="button" value="Show Sum" onclick="f2(10, 20)">
+    <input type="button" value="Show Total Sum" onclick="f3(10, 20, 30, 40, 50, 60)">
+    <input type="button" value="Show Diff" onclick="alert(f4(20, 10))">
+</body>
+
+<script>
+    var f1 = function () {
+        alert("Estou utilizando uma function expression")
+    }
+
+    var f2 = function (a, b) {
+        alert("Sum = " + (a + b).toString())
+    }
+
+    var f3 = function() {
+        var s = 0
+        for(var i = 0; i < arguments.length; i++) {
+            s += arguments[i]
+        }
+        alert("Total Sum = " + s.toString())
+    }
+
+    var f4 = function(a, b) {
+        var c = a - b
+        return c
+    }
+
+    function mostrar() {
+        console.log("f1 = " + f1)
+        console.log("f2 = " + f2)
+        console.log("f3 = " + f3)
+        console.log("f4 = " + f4)
+    }
+</script>
+</html>

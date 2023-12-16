@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atribuição de Funções</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function Alerta() {
+        alert("Isso é um alerta!")
+    }
+
+    var a = Alerta
+    console.log("a = " + a)
+
+    function Soma(a, b) {
+        var c = a + b
+        return c
+    }
+
+    var soma = Soma(10, 20)
+    console.log("soma = " + soma)
+</script>
+</html>

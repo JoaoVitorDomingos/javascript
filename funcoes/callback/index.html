@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks Functions</title>
+</head>
+<body>
+    <input type="button" value="Show1" onclick="DoProcess(10, 20, ShowDiff)">
+    <input type="button" value="Show2" onclick="DoProcess(40, 50, ShowMultiplied)">
+    <input type="button" value="Show3" onclick="DoProcess(50, 80, function(d, e) {alert('Diferença = ' + (d - e))})">
+</body>
+
+<script>
+    function DoProcess(a, b, doLater) {
+        alert("Soma = " + (a + b))
+
+        doLater(a, b);
+    }
+
+    function ShowDiff(p, q) {
+        alert("Diferença = " + (p - q))
+    }
+
+    function ShowMultiplied(m, n) {
+        alert("Product = " + (m * n))
+    }
+</script>
+</html>
