@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atribuição de Função Interna à Externa</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    function doProcess(a, b) {
+        function dispSum() {
+            alert(`Soma de ${a} + ${b} = ${a + b}`)
+        }
+
+        dispSum()
+
+        doProcess = function(a, b) {
+            alert(`Diferença de ${a} - ${b} = ${a - b}`)
+        }
+    }
+
+    console.log(doProcess)
+    doProcess(10, 20)
+
+    console.log(doProcess)
+    doProcess(10, 20)
+
+    console.log(doProcess)
+    doProcess(30, 20)
+
+    console.log(doProcess)
+    doProcess(100, 20)
+
+</script>
+</html>
