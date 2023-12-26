@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately - Invoked Functions Expressions | Self Executing Anonymous Functions</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    /*
+    (
+        function() {
+            alert("This is message.")
+        }
+    ) ()
+    */
+
+    /*
+    (function(a, b) {
+        alert(`Soma de ${a} + ${b} = ${a+b}`)
+    })(10, 20)
+    */
+
+    /*
+   (function() {
+    var s = 0
+    for(var i = 0; i < arguments.length; i++) {
+        s += arguments[i]
+    }
+    alert(`Total Sum = ${s}`)
+   }) (10, 20, 30, 40, 50)
+   */
+
+   /*
+   var r = (function(a, b) {
+    var c = a - b
+    return c
+   }) (40, 5)
+
+   alert(r)
+   */
+
+   alert((function(a, b) {
+    var c = a - b
+    return c
+   }) (40, 5))
+</script>
+
+</html>
