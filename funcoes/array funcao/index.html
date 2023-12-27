@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de Array como Função</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    var ary = []
+
+    ary[0] = function() {
+        console.log(`ary[0] = ${ary[0]}`)
+        alert("first")
+    }
+
+    ary[1] = function() {
+        console.log(`ary[1] = ${ary[1]}`)
+        alert("second")
+    }
+
+    ary[2] = function() {
+        console.log(`ary[2] = ${ary[2]}`)
+        alert("third")
+    }
+
+    for(var i = 0; i < ary.length; i++) {
+        //var f = ary[i]
+        //f()
+
+        ary[i]()
+    }
+
+</script>
+</html>

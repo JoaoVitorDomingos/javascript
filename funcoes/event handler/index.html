@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body>
+    <input type="button" value="Eu sou um botão inútil! Clique no botão abaixo para eu me tornar útil" id="inutil"><br><br>
+    <input type="button" value="Tornarei o de cima útil!" onclick="AttachEvent()">
+</body>
+
+<script>
+
+function AttachEvent() {
+    var botaoInutil = document.getElementById("inutil")
+
+    botaoInutil.onclick = function() {
+        alert("Estou funcionando!")
+    }
+
+    botaoInutil.value = "Não sou mais inútil!"
+}
+
+</script>
+
+</html>
