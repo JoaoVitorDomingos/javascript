@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista>
+
+    <cliente>
+        <nome>Carlos Miguel</nome>
+        <contato>123456</contato>
+    </cliente>
+
+    <cliente>
+        <nome>Eduardo</nome>
+        <contato>987654</contato>
+    </cliente>
+
+    <cliente>
+        <nome>Guilherme</nome>
+        <contato>369852</contato>
+    </cliente>
+
+    <cliente>
+        <nome>Luis</nome>
+        <contato>159632</contato>
+    </cliente>
+
+</lista>
