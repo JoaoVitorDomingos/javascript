@@ -1,0 +1,9 @@
+AJAX = Asynchronous JavaScript XML
+
+Realiza transações de dados entre o front-end e o back-end sem precisar de uma atualização da página, ex: você envia os dados de um formulário para o servidor e ele responde com sucesso, tudo isso acontece sem que a página tenha que ser atualizada.
+
+Processamento Síncrono: Caso tenha a função 1, 2 e 3 nesta ordem, realizará as funções em ordem.
+
+Processamento Assíncrono: Realizará as funções em qualquer ordem, por exemplo, caso a função 3 tenha o processamento menor que as outras, ela será processada primeiro, isso permite uma melhor performace e, principalmente, usuabilidade.
+
+Site de API FAKE: https://reqres.in/
