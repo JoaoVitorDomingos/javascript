@@ -20,12 +20,12 @@ form.addEventListener("submit", function(event) {
     fetch("https://reqres.in/api/users", {
         method: "POST",
         body: JSON.stringify(dados)
-    }).then(function(response) {
+    }).then(function(response) { // No cenário onde não houve nenhum erro, então fará o que tem que ser feito quando não há erros.
         //console.log(response)
         return response.json()
     }).then(function(response) {
         console.log(response)
         alert("Cadastro realizado com sucesso!")
     })
-
+    // .catch - No cenário onde terá erros, então fará o que tem que ser feito quando houver erros.
 })
