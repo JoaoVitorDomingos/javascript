@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Propagation</title>
+
+    <style>
+        .caixa {
+            border: 3px solid black;
+            max-width: 35%;
+            margin: 40px auto;
+            padding: 60px;
+            border-radius: 5px;
+            background-color: rgb(231, 229, 229);
+        }
+
+        .curso {
+            font-size: 1.5em;
+            text-align: center;
+            padding: 20px;
+            margin: 30px auto;
+            border: 3px solid rgb(87, 87, 87);
+            background-color: rgb(165, 164, 164);
+            border-radius: 5px;
+            max-width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa" class="caixa"> <!-- Este elemento tem um Evento de Click nele, então sempre que for clicado algo acontecerá, mas este evento é propagado para seus filhos também, tudo dentro dele também terá este evento, e para evitar isto usa-se o Stop Propagation-->
+        <div id="c1" class="curso">HTML</div> <!-- Este elemento filho, ao ser clicado acionará o evento que está no pai, por causa da propagação. A mesma coisa para os outros filhos.-->
+        <div id="c1" class="curso">CSS</div>
+        <div id="c1" class="curso">JavaScript</div>
+    </div>
+
+    <script>
+
+        let caixa = document.getElementById("caixa")
+        let cursos = [...document.getElementsByClassName("curso")]
+
+        caixa.addEventListener("click", (event) => { // Evento que foi adicionado a div pai, que é acionado também quando se clica nos filhos
+            console.log("clicou")
+            console.log(event.target)
+        })
+
+        cursos.map((el) => {
+            el.addEventListener("click", evento => {
+                evento.stopPropagation() // Método que impedirá o evento do pai aconteça no filho também.
+            })
+        })
+
+    </script>
+</body>
+</html>
