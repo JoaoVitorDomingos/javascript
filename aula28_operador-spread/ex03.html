@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JavaScript</div>
+
+    <script>
+       // O operador Spread pode transformar um HTML Collection em Array
+       // HTML Collection só aceitará objetos HTML e terá métodos diferentes de um array.
+       // O Array aceitará diferentes tipos de dados e terá métodos diferentes de um HTML Collection.
+       const objts1 = document.getElementsByTagName("div")
+       const objts2 = [...document.getElementsByTagName("div")]
+
+       console.log(objts1)
+       console.log(objts2)
+
+       objts2.forEach(elemento => console.log(elemento)) // Irá printar na tela cada elemento pois a função forEach é um método de array
+
+       objts1.forEach(elemento => console.log(elemento)) // Dará erro, pois forEach não é um método de HTML Collection
+    </script>
+</body>
+</html>
