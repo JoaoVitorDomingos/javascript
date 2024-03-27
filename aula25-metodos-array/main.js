@@ -45,6 +45,8 @@ console.log(numeros.includes(100))
 // 5 - MAP
 // Percorre cada item do array executando o que foi defenido
 // Geralmente quando se quer alterar algo no array se usa o map
+// Diferente dos Arrays, o map percorre o array inteiro sem a opção de parar no meio.
+// array.map((elemento, indice) => {})
 data.map((user) => (user.newsletter = false))
 
 console.log(data)
